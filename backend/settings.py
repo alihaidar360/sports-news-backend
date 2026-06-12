@@ -25,8 +25,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    "whitenoise.middleware.WhiteNoiseMiddleware",
     "corsheaders.middleware.CorsMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+    
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -37,6 +38,7 @@ MIDDLEWARE = [
     
 ]
 CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS= ["https://sports-news-project.vercel.app"]
 ROOT_URLCONF = "backend.urls"
 
 TEMPLATES = [
