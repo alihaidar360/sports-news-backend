@@ -11,6 +11,6 @@ class SubscriberAdmin(admin.ModelAdmin):
 
 @admin.register(ContactMessage)
 class ContactMessageAdmin(admin.ModelAdmin):
-    list_display = ("name", "email", "topic", "created_at") 
-    list_filter = ("topic", "created_at")             
-    search_fields = ("name", "email", "message")          
+    list_display = ("name", "email", "topic", "message", "created_at")
+    list_filter = ("topic", "created_at")
+    search_fields = ("name", "email", "message")
